@@ -41,6 +41,7 @@ app.get("/", (req, res) =>{
 
     let search = req.query.job
     let query = '%'+search+'%' //PH -> PHP, Word -> Wordpress
+    
     if(!search) {
         Job.findAll({order: [
             ['createdAt', 'DESC']

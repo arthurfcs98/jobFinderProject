@@ -8,15 +8,15 @@ router.get('/test', (req, res) => {
 })
 
 //details 
-router.get('/view/:id', (req,res) => Job.findOne({
-where: {id: req.params.id}
-}).then(job => {
-
+router.get('/view/:id', (req, res) => Job.findOne({
+    where: {id: req.params.id}
+  }).then(job => {
+  
     res.render('view', {
-        job
-})
-
-}).catch(err => console.log(err)))
+      job
+    });
+  
+  }).catch(err => console.log(err)));
 
 //form send route
 router.get('/add', (req,res) =>{

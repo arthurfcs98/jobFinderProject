@@ -6,7 +6,6 @@ const Job = require('../models/Job')
 router.get('/test', (req, res) => {
     res.send('Deu certo!')
 })
-
 //details 
 router.get('/view/:id', (req, res) => Job.findOne({
     where: {id: req.params.id}

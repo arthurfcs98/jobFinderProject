@@ -16,7 +16,7 @@ router.get('/view/:id', (req, res) => Job.findOne({
       job
     });
   
-  }).catch(err => console.log(err)));
+  }).catch(err => console.log(err)))
 
 //form send route
 router.get('/add', (req,res) =>{
@@ -40,4 +40,3 @@ router.post('/add', (req,res) => {
     .catch(err => console.log(err))
 })
 module.exports = router
-
